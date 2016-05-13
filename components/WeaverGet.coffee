@@ -1,10 +1,7 @@
 'use strict'
 
 noflo = require 'noflo'
-Weaver = require 'weaver-sdk'
-
-weaver = new Weaver
-weaver.connect 'https://weaver-server.herokuapp.com'
+weaver = require('../lib/WeaverComponent.coffee').weaver
 
 class WeaverGet extends noflo.AsyncComponent
   description: "Asynchronous getter from weaver"
