@@ -23,5 +23,4 @@ class WeaverGet extends noflo.AsyncComponent
       callback null
     )
 
-exports.getComponent = -> new AsyncGet
-
+exports.getComponent = -> new WeaverGet
