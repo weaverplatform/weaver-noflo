@@ -1,30 +1,27 @@
+'use strict'
+
 noflo = require 'noflo'
+Weaver = require 'weaver-sdk'
 
-exports.getComponent = ->
-  c = new noflo.Component
+weaver = new Weaver
+weaver.connect 'https://weaver-server.herokuapp.com'
 
-  # Define a meaningful icon for component from http://fontawesome.io/icons/
-  c.icon = 'cog'
+class WeaverGet extends noflo.AsyncComponent
+  description: "Asynchronous getter from weaver"
+  constructor: ->
+    @inPorts = weaverid: new noflo.Port 'string'
+    @outPorts = weaverobject: new noflo.Port 'object'
+    super 'weaverid', 'weaverobject'
 
-  # Provide a description on component usage
-  c.description = 'do X'
+  doAsync: (weaverid, callback) ->
+    port = @outPorts.weaverobject
+    port.connect
+    weaver.get(weaverid, { eagerness: -1 }).then((p) -> 
+      port.beginGroup weaverid
+      port.send p
+      port.endGroup
+      callback null
+    )
 
-  # Add input ports
-  c.inPorts.add 'in',
-    datatype: 'string'
-  # Add output ports
-  c.outPorts.add 'out',
-    datatype: 'string'
+exports.getComponent = -> new AsyncGet
 
-  noflo.helpers.WirePattern c,
-    in: 'in'
-    out: 'out'
-    forwardGroups: true
-    async: true
-  , (data, groups, out, callback) ->
-    # What to do when port receives a packet
-    out.send data
-    do callback
-
-  # Finally return the component instance
-  c
