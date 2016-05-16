@@ -11,37 +11,30 @@
     "type": "git",
     "url": "git@github.com:weaverplatform/weaver-noflo.git"
   },
-  "licenses": [
-    {
-      "type": "AGPL",
-      "url": "undefined/blob/master/LICENSE-AGPL"
-    },
-    {
-      "type": "v3",
-      "url": "undefined/blob/master/LICENSE-v3"
-    }
-  ],
+  "license": "AGPL-3.0",
   "scripts": {
     "test": "grunt test"
   },
   "dependencies": {
+    "component": "^0.14.0",
     "noflo": "~0.5.11",
     "weaver-sdk": "^0.1.2"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-coffee": "~0.13.0",
-    "grunt-coffeelint": "~0.0.13",
-    "grunt-cafe-mocha": "~0.1.13",
     "chai": "~2.0.0",
-    "mocha": "~2.1.0",
-    "noflo-nodejs": "^0.7.1",
-    "noflo-core": "^0.1.14",
-    "grunt-mocha-phantomjs": "~0.6.0",
+    "grunt": "~0.4.5",
+    "grunt-cafe-mocha": "~0.1.13",
+    "grunt-coffeelint": "~0.0.13",
+    "grunt-contrib-coffee": "~0.13.0",
     "grunt-contrib-uglify": "~0.8.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-mocha-phantomjs": "~0.6.0",
+    "grunt-noflo-browser": "^0.1.9",
     "grunt-noflo-manifest": "~0.1.11",
-    "grunt-noflo-browser": "^0.1.9"
+    "mocha": "~2.1.0",
+    "noflo-core": "^0.1.14",
+    "noflo-nodejs": "^0.7.1",
+    "phantomjs": "^1.9.7-15"
   },
   "keywords": [
     "noflo",
