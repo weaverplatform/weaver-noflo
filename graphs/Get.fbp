@@ -1,3 +1,4 @@
-'testdata' -> IN Repeater(core/Repeat)
-Repeater OUT -> WEAVERID Getter(WeaverGet)
+'https://weaver-server.herokuapp.com' -> ADDRESS Connector(WeaverConnect)
+'testdata' -> WEAVERID Getter(WeaverGet)
+Connector OUT -> WEAVER Getter
 Getter WEAVEROBJECT -> IN Display(core/Output)

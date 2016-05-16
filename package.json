@@ -1,7 +1,7 @@
 {
   "name": "noflo-weaver",
   "description": "Noflo component library for communication with a weaver server",
-  "version": "0.2.0",
+  "version": "v0.2.0",
   "author": {
     "name": "Gijs van der Ent",
     "email": "gijs@sysunite.com",
@@ -33,11 +33,21 @@
     "grunt-noflo-manifest": "~0.1.11",
     "mocha": "~2.1.0",
     "noflo-core": "^0.1.14",
-    "noflo-nodejs": "^0.7.1",
-    "phantomjs": "^1.9.7-15"
+    "noflo-nodejs": "^0.7.1"
   },
   "keywords": [
     "noflo",
     "ecosystem:noflo"
-  ]
+  ],
+  "noflo": {
+    "graphs": {
+      "Get": "graphs/Get.fbp",
+      "Update": "graphs/Update.fbp"
+    },
+    "components": {
+      "WeaverConnect": "components/WeaverConnect.coffee",
+      "WeaverGet": "components/WeaverGet.coffee",
+      "WeaverUpdateProperty": "components/WeaverUpdateProperty.coffee"
+    }
+  }
 }

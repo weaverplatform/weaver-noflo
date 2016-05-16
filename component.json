@@ -3,9 +3,8 @@
   "description": "Noflo component library for communication with a weaver server",
   "author": "Gijs van der Ent <gijs@sysunite.com>",
   "repo": "gijs/weaver-noflo",
-  "version": "0.1.0",
-  "keywords": [
-  ],
+  "version": "v0.2.0",
+  "keywords": [],
   "dependencies": {
     "noflo/noflo": "*"
   },
@@ -13,6 +12,29 @@
     "https://raw.githubusercontent.com"
   ],
   "scripts": [
-    "index.js"
-  ]
+    "index.js",
+    "components/WeaverConnect.coffee",
+    "components/WeaverGet.coffee",
+    "components/WeaverUpdateProperty.coffee",
+    "graphs/Get.fbp",
+    "graphs/Update.fbp"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "fbp": [
+    "graphs/Get.fbp",
+    "graphs/Update.fbp"
+  ],
+  "noflo": {
+    "graphs": {
+      "Get": "graphs/Get.fbp",
+      "Update": "graphs/Update.fbp"
+    },
+    "components": {
+      "WeaverConnect": "components/WeaverConnect.coffee",
+      "WeaverGet": "components/WeaverGet.coffee",
+      "WeaverUpdateProperty": "components/WeaverUpdateProperty.coffee"
+    }
+  }
 }

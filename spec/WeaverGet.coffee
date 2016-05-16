@@ -13,11 +13,11 @@ describe 'WeaverGet component', ->
     c = WeaverGet.getComponent()
     ins = noflo.internalSocket.createSocket()
     out = noflo.internalSocket.createSocket()
-    c.inPorts.in.attach ins
-    c.outPorts.out.attach out
+    c.inPorts.weaverid.attach ins
+    c.outPorts.weaverobject.attach out
 
   describe 'when instantiated', ->
     it 'should have an input port', ->
-      chai.expect(c.inPorts.in).to.be.an 'object'
+      chai.expect(c.inPorts.weaverid).to.be.an 'object'
     it 'should have an output port', ->
-      chai.expect(c.outPorts.out).to.be.an 'object'
+      chai.expect(c.outPorts.weaverobject).to.be.an 'object'

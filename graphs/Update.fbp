@@ -1,6 +1,7 @@
-'testdata' -> IN Repeater(core/Repeat)
+'https://weaver-server.herokuapp.com' -> ADDRESS Connector(WeaverConnect)
 'property' -> PROPERTYNAME Updater(WeaverUpdateProperty)
 'value' -> PROPERTYVALUE Updater
-Repeater OUT -> WEAVERID Getter(WeaverGet)
+'testdata' -> WEAVERID Getter(WeaverGet)
+Connector OUT -> WEAVER Getter
 Getter WEAVEROBJECT -> IN Display(core/Output)
 Getter WEAVEROBJECT -> UPDATEOBJECT Updater
