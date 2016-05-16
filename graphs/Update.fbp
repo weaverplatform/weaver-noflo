@@ -1,0 +1,6 @@
+'testdata' -> IN Repeater(core/Repeat)
+'property' -> PROPERTYNAME Updater(WeaverUpdateProperty)
+'value' -> PROPERTYVALUE Updater
+Repeater OUT -> WEAVERID Getter(WeaverGet)
+Getter WEAVEROBJECT -> IN Display(core/Output)
+Getter WEAVEROBJECT -> UPDATEOBJECT Updater

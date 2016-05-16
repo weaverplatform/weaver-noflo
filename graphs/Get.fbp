@@ -1,0 +1,3 @@
+'testdata' -> IN Repeater(core/Repeat)
+Repeater OUT -> WEAVERID Getter(WeaverGet)
+Getter WEAVEROBJECT -> IN Display(core/Output)
