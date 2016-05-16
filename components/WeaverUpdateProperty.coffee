@@ -9,12 +9,12 @@ class WeaverUpdateProperty extends noflo.AsyncComponent
   description: "Asynchronous updater for weaver objects"
   constructor: ->
     console.log "constructor called"
-    @inPorts = 
+    @inPorts =
       updateobject: new noflo.Port 'object'
       propertyname: new noflo.Port 'string'
       propertyvalue: new noflo.Port 'string'
 
-    @outPorts = 
+    @outPorts =
       out: new noflo.Port 'boolean'
 
     @inPorts['propertyname'].on 'data', (data) =>

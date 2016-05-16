@@ -13,7 +13,7 @@ class WeaverGet extends noflo.AsyncComponent
   doAsync: (weaverid, callback) ->
     port = @outPorts.weaverobject
     port.connect
-    weaver.get(weaverid, { eagerness: -1 }).then((p) -> 
+    weaver.get(weaverid, { eagerness: -1 }).then((p) ->
       port.beginGroup weaverid
       port.send p
       port.endGroup
