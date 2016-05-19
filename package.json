@@ -1,7 +1,7 @@
 {
   "name": "noflo-weaver",
   "description": "Noflo component library for communication with a weaver server",
-  "version": "v0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Gijs van der Ent",
     "email": "gijs@sysunite.com",
